@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvadrat tənliyi</title>
+</head>
+<body>
+    <h1>Kvadrat tənliyinin hesablanması</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Hesabla</button>
+    </form>
+    Tənlik:
+    {{ a }} 
+    <!-- {% if a != 1 %}{{ a }}{% else %}{% endif %} -->
+    x<sup>2</sup> + 
+    {{ b }} 
+    x + {{ c }} =0. 
+    
+    <br>
+    {% if cavab is not None %}
+    Cavab: {{ cavab }}. <br> Köklər: {{ x1 }} {{ x2 }}.
+    {% endif %}
+    
+</body>
+</html>
+
+
+
